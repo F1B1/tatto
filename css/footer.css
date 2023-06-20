@@ -1,0 +1,7 @@
+.footer {
+  background-color: #201C21;
+}
+.footer__logo {
+  display: flex;
+  flex: 0 1 29.9212598425%;
+}

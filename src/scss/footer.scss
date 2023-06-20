@@ -1,0 +1,125 @@
+
+.footer {
+	background-color: #201C21;
+	&__container {}
+	&__body {
+		min-height: 120px;
+		align-items:center;
+		display: flex;
+		margin-left: 30px;
+		z-index: 5;
+		position: relative;
+		@media (max-width:$mobile){
+			 justify-content: center; 
+			 flex-wrap: wrap;
+		}
+	}
+	&__image{
+		display: flex;
+		position: relative;
+		flex: 0 1 calc(480px/1270px) *100%;
+	}
+	&__menu{
+		@media (max-width: em(546)){
+			  margin: 15px 0;
+		}
+	}
+	&__logo {
+		@include adaptiveValue("font-size",20 , 17,1);
+		@include adaptiveValue("max-width",105 ,95,1 );
+    	text-align: center;
+		z-index: 5;
+	}
+	&__list {
+		display: flex;
+	}
+	&__item {
+		font-size: rem(20);
+		@include adaptiveValue("font-size",20 ,16,1 );
+		text-transform: uppercase;
+		position: relative;
+		&::before{
+			content:'';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 0;
+			height: 2px;
+			background-color: #BC59C5;
+			transition: all 0.3s ease 0s;
+		}	
+		&:hover{
+			&::before{
+				width: 100%;
+			}
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 60,30,1 );
+		}
+	}
+	&__link {}
+	&__copy{
+		text-align: center;
+	}
+}
+
+.brench-footer {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top: -20px;
+	z-index: 5;
+}
+.brench-1-footer{
+	transform:rotate(240deg);
+	@include adaptiveValue("left",80 ,70,1 );
+}
+.brench-2-footer{
+	transform: rotate(-240deg) scale(-1,1);
+	@include adaptiveValue("left",-60 ,-45,1 );
+
+}
+
+
+
+// .footer {
+// 	position: relative;
+// 	&__logo{
+// 		@include adaptiveValue("font-size",20 , 17,1);
+// 		@include adaptiveValue("max-width",125 ,105,1 );
+//     	text-align: center;
+// 		z-index: 5;
+// 	}
+// 	&__list {
+// 		display: flex;
+// 		@media (max-width:$mobile){
+// 			 display: block; 
+// 		}
+		
+// 	}
+// 	&__item {
+// 		font-size: rem(20);
+// 		text-transform: uppercase;
+// 		position: relative;
+// 		&::before{
+// 			content:'';
+// 			position: absolute;
+// 			left: 0;
+// 			bottom: -5px;
+// 			width: 0;
+// 			height: 2px;
+// 			background-color: #BC59C5;
+// 			transition: all 0.3s ease 0s;
+// 		}	
+// 		&:hover{
+// 			&::before{
+// 				width: 100%;
+// 			}
+// 		}
+// 		&:not(:last-child) {
+// 			@include adaptiveValue("margin-right", 60,30,1 );
+// 		}
+// 	}
+// }
+
+//====================================================================================================

@@ -1,0 +1,35 @@
+.page {
+  flex: 1 1 auto;
+}
+.main::after {
+  content: "";
+  background: #1E1E1E;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: -2;
+  position: absolute;
+}
+.main__image {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+.main-brench-1 {
+  position: absolute;
+}
+
+.main-brench-2 {
+  position: absolute;
+}
+
+.body-main__summary {
+  text-align: center;
+}
+.body-main__title {
+  font-family: "Comforter";
+}
