@@ -279,7 +279,7 @@ body {
     min-width: 18px;
     height: 18px;
     position: absolute;
-    background-image: url("../img/icons/icons8-phone-48.svg");
+    background-image: url("img/icons/icons8-phone-48.svg");
     left: -20px;
     background-size: 18px 18px;
     background-repeat: no-repeat;
@@ -799,9 +799,8 @@ body {
 .slider__sub-title {
   font-family: "Comforter";
   font-size: calc(1.5625rem + 0.9375 * (((100vw - 20rem)) / ((70))));
-  margin-top: calc(-0.625rem + -0.625 * (((100vw - 20rem)) / ((70))));
+  margin-bottom: calc(0rem + -1.25 * (((100vw - 20rem)) / ((70))));
   font-weight: 400;
-  margin: 0px 0px -20px 0px;
 }
 .slider__title {
   color: #BC59C5;
@@ -812,6 +811,23 @@ body {
 .controls-slider__arrows {
   display: flex;
   justify-content: space-between;
+}
+
+.slider-arrow_prev {
+  z-index: 10;
+}
+.slider-arrow_prev::before {
+  content: "‹";
+  font-size: calc(1.875rem + 1.875 * (((100vw - 20rem)) / ((70))));
+  vertical-align: middle;
+}
+.slider-arrow_next {
+  z-index: 10;
+}
+.slider-arrow_next::after {
+  content: "›";
+  font-size: calc(1.875rem + 1.875 * (((100vw - 20rem)) / ((70))));
+  vertical-align: middle;
 }
 
 .body-slider {
@@ -833,7 +849,7 @@ body {
 }
 @media (max-width: 47.99875em) {
   .body-slider__column {
-    min-height: 260px;
+    min-height: 300px;
     padding: calc(1.25rem + 1.875 * (((100vw - 20rem)) / ((70))));
   }
 }
@@ -905,8 +921,12 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px solid #A248AA;
+  border: 1px solid #000;
   transition: all 0.3s ease 0s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #A248AA !important;
 }
 
 .info {
