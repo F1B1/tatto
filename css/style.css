@@ -161,7 +161,7 @@ body {
 Снипет (HTML): cnt
 */
 [class*=__container] {
-  max-width: 79.375rem;
+  max-width: 81.25rem;
   box-sizing: content-box;
   margin: 0 auto;
   padding: 0 0.9375rem;
@@ -240,6 +240,12 @@ body {
 }
 .menu__list {
   display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 61.99875em) {
+  .menu__list {
+    max-width: 85%;
+  }
 }
 @media (max-width: 47.99875em) {
   .menu__list {
@@ -283,6 +289,11 @@ body {
     left: -20px;
     background-size: 18px 18px;
     background-repeat: no-repeat;
+  }
+}
+@media (max-width: 61.99875em) {
+  .menu__item {
+    padding-bottom: 10px;
   }
 }
 .menu__phone {
@@ -488,7 +499,6 @@ body {
 }
 .tattoo__block {
   flex: 0 1 50%;
-  filter: drop-shadow(0 0 4.75rem #ea00ff);
   padding-bottom: 30px;
   display: flex;
   flex-direction: column;
@@ -1039,6 +1049,13 @@ body {
 }
 .footer__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 29.99875em) {
+  .footer__list {
+    padding: 10px 0 0 0;
+  }
 }
 .footer__item {
   font-size: 1.25rem;
@@ -1061,6 +1078,11 @@ body {
 }
 .footer__item:not(:last-child) {
   margin-right: calc(1.875rem + 1.875 * (((100vw - 20rem)) / ((70))));
+}
+@media (max-width: 29.99875em) {
+  .footer__item {
+    padding: 0 0 10px 0;
+  }
 }
 .footer__copy {
   text-align: center;
